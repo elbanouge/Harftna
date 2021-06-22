@@ -1,0 +1,95 @@
+﻿@model IEnumerable<WebApplicationHarftna.Models.Client>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nomcli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prenomcli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Motpasscli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Emailcli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telcli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cinpasscli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imagecli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Scorecli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ipcli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Emailverifier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datecreate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nomcli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prenomcli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Motpasscli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emailcli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telcli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cinpasscli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Imagecli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Scorecli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ipcli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emailverifier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datecreate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Idcli">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Idcli">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Idcli">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
